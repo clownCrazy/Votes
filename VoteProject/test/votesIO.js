@@ -8,7 +8,8 @@ async function testcandidateIO() {
         candidate:"谢乾",
         status: true
     };
-    await testIO(votes);
+    let status = await testIO(votes);
     console.log(await candidate.findOne({candidate:votes.candidate}));
+    console.log(typeof status);
 };
 testcandidateIO()

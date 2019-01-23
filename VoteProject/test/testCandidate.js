@@ -13,13 +13,20 @@ async function testVotes(){
 
     let votes = {
         candidate:"谢乾",
-        votes:"867402511@qq.com"
+        user:"867402511@qq.com"
     };
     await candidate.votesCandidate(votes);
     let res = await result.findOne({candidate: votes.candidate});
     console.log(res)
 
 };
+async function testFind(){
+
+    let res = await result.findOne({_id:"5c48005449327306201fa00a"});
+    console.log(res)
+
+};
 
 // testAdd();
 testVotes();
+//  testFind()

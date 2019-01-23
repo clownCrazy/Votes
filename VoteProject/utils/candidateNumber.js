@@ -13,7 +13,7 @@ async function num(votes) {
     let a = 0;
     let number = 0;
     for (a ; a < array.length ; a++){
-        if (array[a] === votes.votes){
+        if (array[a] === votes.user){
             number++;
         }
     }

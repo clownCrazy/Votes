@@ -4,10 +4,10 @@ let votesService = require('../service/user');
 
 async function testAdd() {
     let use = {
-        user: "867402511@qq.com",
+        user: "crazyClown",
         password: "123456",
-        email:"867402511@qq.com",
-        code:"526647"
+        email:"crazyclown520@outlook.com",
+        code:"005980"
     };
     let res = await votesService.addVotes(use);
     console.log(res);
@@ -30,4 +30,4 @@ async function testLogin(){
 
 };
 // testDelete();
-testAdd()
+testLogin()

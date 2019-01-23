@@ -13,7 +13,13 @@ app.use(morgan('combined'));
 app.use(bodyParser.json());
 //自定义中间件
 app.use(require('./middleware/res_md'));
-app.use("/votes", require('./router/user'));
+app.use(require('./middleware/token_md'));
+
+//注册路由
+app.use("/user", require('./router/user'));
+app.use("/votesIO", require('./router/votesIO'));
+app.use("/sendEmail", require('./router/emailCode'));
+app.use("/candidate", require('./router/candidate'));
 
 app.use((err,req,res,next)=>{
     res.fail(err.toString());

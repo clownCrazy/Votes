@@ -3,8 +3,8 @@ let sendEmail = require('../service/emailCode');
 let email = require('../model/verifyEmail');
 async function testEmail() {
     await sendEmail({
-        user:"xieqian",
-        email:"867402511@qq.com"
+        user:"crazyClown",
+        email:"crazyclown520@outlook.com"
     })
 
 }

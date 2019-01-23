@@ -25,7 +25,7 @@ async function getVotes(user) {
 
 /**
  * 删除用户
- * @param user <String>
+ * @param user <Object>
  * @returns {Promise<void>}
  */
 async function deleteVotes(user) {
@@ -91,6 +91,7 @@ async function loginVotes(votes){
         user:votes.user,
         expire:Date.now() + config.TokenExpire
     };
+
     let token = crypto.aesEncrypt(JSON.stringify(tokenData), config.TokenKey);
     return token;
 };
