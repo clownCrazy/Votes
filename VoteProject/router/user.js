@@ -1,7 +1,12 @@
 let router = require('express').Router();
 let votesService = require('../service/user');
-router.get('/:email',async (req,res)=>{
-    let votes = await votesService.getVotes(req.params.email);
+
+
+/**
+ *
+ */
+router.get('/:user',async (req,res)=>{
+    let votes = await votesService.getVotes(req.params.user);
     res.success(votes);
 });
 

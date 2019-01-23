@@ -1,6 +1,8 @@
 let nodemailer = require('nodemailer');
 let config = require('../config');
-
+/**
+ * 邮件注册发送配置
+ */
 let transport = nodemailer.createTransport({
     host: 'smtp.163.com', //163 smtp服务器地址
     secureConnection: false, //是否使用安全连接，对https协议的
